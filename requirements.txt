@@ -1,0 +1,9 @@
+fastapi
+fastapi[standard]
+pytest
+pytest-asyncio
+asyncpg
+psycopg2-binary
+yandex-pgmigrate
+redis
+async_lru

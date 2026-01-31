@@ -1,0 +1,4 @@
+/clients/__pycache__
+/models/__pycache__
+/repositories/__pycache__
+*.pyc

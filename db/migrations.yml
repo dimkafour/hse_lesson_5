@@ -1,0 +1,1 @@
+conn: 'dbname=lesson user=postgres host=minikube port=30200 password=postgres'

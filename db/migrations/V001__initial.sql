@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS public.account (
+    id SERIAL PRIMARY KEY,
+    name TEXT NOT NULL,
+    password TEXT NOT NULL,
+    email TEXT NOT NULL UNIQUE,
+    is_active BOOLEAN DEFAULT TRUE NOT NULL
+);
