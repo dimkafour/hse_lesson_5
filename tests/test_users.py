@@ -16,6 +16,7 @@ RAW_USER = dict(
 
 
 
+@pytest.mark.integration
 @pytest.mark.parametrize('name', ['Иванов И.И.'])
 @pytest.mark.parametrize('password', [PASSWORD])
 def test_create_user(
@@ -33,6 +34,7 @@ def test_create_user(
     assert read_user['name'] == some_user['name']
 
 
+@pytest.mark.integration
 @pytest.mark.parametrize('name', ['Иванов И.И.'])
 @pytest.mark.parametrize('password', [PASSWORD])
 def test_deactivate_user(
@@ -58,6 +60,7 @@ def test_deactivate_user(
     assert read_response.json()['is_active'] == updated_user['is_active']
 
 
+@pytest.mark.integration
 @pytest.mark.parametrize('name', ['Иванов И.И.'])
 @pytest.mark.parametrize('password', [PASSWORD])
 def test_delete_user(
@@ -79,6 +82,7 @@ def test_delete_user(
     assert get_user.status_code == HTTPStatus.NOT_FOUND
 
 
+@pytest.mark.integration
 @pytest.mark.parametrize('name', ['Иванов И.И.'])
 @pytest.mark.parametrize('password', [PASSWORD])
 def test_get_many_users(
@@ -106,6 +110,7 @@ def test_get_many_users(
     assert len([user for user in users if user['id'] == some_user['id']]) == 0
 
 
+@pytest.mark.integration
 @pytest.mark.parametrize('name', ['Иванов И.И.'])
 @pytest.mark.parametrize('password', [PASSWORD])
 def test_login_user(
@@ -123,6 +128,7 @@ def test_login_user(
     assert logged_user['id'] == some_user['id']
 
 
+@pytest.mark.integration
 @pytest.mark.parametrize('name', ['Иванов И.И.'])
 @pytest.mark.parametrize('password', [PASSWORD])
 def test_get_current_user(
